@@ -3,6 +3,7 @@ package to.my.java;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 
 /**
  * Created by Jhon on 2016-01-07.
@@ -21,7 +22,7 @@ public class OopExample {
     }
 }
 
-class MyList<E> extends ArrayList<E> {
+class MyList<E> extends HashSet<E> {
     private int count;
 
     public int getCount() {
