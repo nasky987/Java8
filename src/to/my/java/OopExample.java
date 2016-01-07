@@ -22,7 +22,26 @@ public class OopExample {
     }
 }
 
-class MyList<E> extends HashSet<E> {
+class MySet<E> extends HashSet<E> {
+    @Override
+    public boolean addAll(final Collection<? extends E> c) {
+        boolean modified = false;
+        for(E e : c)
+            if(add0(e))
+                modified = true;
+        return modified;
+    }
+
+    @Override
+    public boolean add(final E e) {
+        return add0(e);
+    }
+
+    private boolean add0(final E e) {
+        return super.add(e);
+    }
+}
+class MyList<E> extends MySet<E> {
     private int count;
 
     public int getCount() {
