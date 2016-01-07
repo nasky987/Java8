@@ -1,0 +1,6 @@
+Hello world
+Hello Java
+Hello Java8
+Hello Java world
+Hi Java
+Hi Java8
