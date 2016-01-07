@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class AppMain {
     public static void main(String[] args) {
-        try (final FileReader fileReader = new FileReader(new File("D:\\Developer Data/InteliJ_Workspace/Java8/src/to/my/java/temp/test1.txt"));
+        try (final FileReader fileReader = new FileReader(new File("D:\\Developer Data/InteliJ_Workspace/Java8/src/to/my/java/temp/test.txt"));
             final BufferedReader bufferedReader = new BufferedReader(fileReader)) {
 
             final List<String> uniqueWords = new ArrayList<>();
