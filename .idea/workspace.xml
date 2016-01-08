@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40c76a82-b895-4d0b-9633-ca12bbbfbeaf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/to/my/java/OopAnotherExample.java" afterPath="$PROJECT_DIR$/src/main/java/to/my/java/OopAnotherExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java" />
     </list>
     <ignored path="Java8.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CalculatorServiceTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalculatorServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6733167">
+            <state vertical-scroll-proportion="0.0">
               <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
               <folding />
             </state>
@@ -53,24 +52,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OopAnotherExample.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OopAnotherExample.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/to/my/java/OopAnotherExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.7755611">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
-                <element signature="e#1171#1172#0" expanded="true" />
-                <element signature="e#1205#1206#0" expanded="true" />
-                <element signature="e#1313#1314#0" expanded="true" />
-                <element signature="e#1347#1348#0" expanded="true" />
-                <element signature="e#1457#1458#0" expanded="true" />
-                <element signature="e#1491#1492#0" expanded="true" />
-                <element signature="e#1596#1597#0" expanded="true" />
-                <element signature="e#1630#1631#0" expanded="true" />
-                <element signature="e#1758#1759#0" expanded="true" />
-                <element signature="e#1804#1805#0" expanded="true" />
-                <element signature="e#1852#1853#0" expanded="true" />
-                <element signature="e#1908#1909#0" expanded="true" />
+                <element signature="e#1245#1246#0" expanded="true" />
+                <element signature="e#1279#1280#0" expanded="true" />
+                <element signature="e#1387#1388#0" expanded="true" />
+                <element signature="e#1421#1422#0" expanded="true" />
+                <element signature="e#1531#1532#0" expanded="true" />
+                <element signature="e#1565#1566#0" expanded="true" />
+                <element signature="e#1670#1671#0" expanded="true" />
+                <element signature="e#1704#1705#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,8 +89,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/to/my/java/OopAnotherExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/to/my/java/OopAnotherExample.java" />
       </list>
     </option>
   </component>
@@ -287,8 +282,10 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorServiceTest">
+  <component name="RunManager" selected="Application.OopAnotherExample">
     <configuration default="false" name="OopAnotherExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -755,8 +752,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CalculatorServiceTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.OopAnotherExample" />
+        <item index="0" class="java.lang.String" itemvalue="Application.OopAnotherExample" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -767,7 +764,7 @@
       <created>1452243002135</created>
       <option name="number" value="Default" />
       <updated>1452243002135</updated>
-      <workItem from="1452243003360" duration="1785000" />
+      <workItem from="1452243003360" duration="2221000" />
     </task>
     <task id="LOCAL-00001" summary="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;테스트 케이스 작성 및 확인&#10;이번 코드의 경우 문제가 명확하므로 상관이 없지만 실제로는 그렇지 않을 가능성이 높다&#10;하나의 메소드에서 너무 많은 일을 처리하는것이 많다.">
       <created>1452243755252</created>
@@ -775,7 +772,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452243755252</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;OOP의 특성을 이용하여 디자인 패턴이 적용된 코드 작성&#10;모든 코드를 검사할 것이 아니라 하나의 경우에만 검사하면 된다.">
+      <created>1452244865606</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1452244865606</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -808,7 +811,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1785000" />
+    <option name="totallyTimeSpent" value="2221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -821,7 +824,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -846,7 +849,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;테스트 케이스 작성 및 확인&#10;이번 코드의 경우 문제가 명확하므로 상관이 없지만 실제로는 그렇지 않을 가능성이 높다&#10;하나의 메소드에서 너무 많은 일을 처리하는것이 많다." />
-    <option name="LAST_COMMIT_MESSAGE" value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;테스트 케이스 작성 및 확인&#10;이번 코드의 경우 문제가 명확하므로 상관이 없지만 실제로는 그렇지 않을 가능성이 높다&#10;하나의 메소드에서 너무 많은 일을 처리하는것이 많다." />
+    <MESSAGE value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;OOP의 특성을 이용하여 디자인 패턴이 적용된 코드 작성&#10;모든 코드를 검사할 것이 아니라 하나의 경우에만 검사하면 된다." />
+    <option name="LAST_COMMIT_MESSAGE" value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;OOP의 특성을 이용하여 디자인 패턴이 적용된 코드 작성&#10;모든 코드를 검사할 것이 아니라 하나의 경우에만 검사하면 된다." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -865,32 +869,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/to/my/java/OopAnotherExample.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-          <folding>
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1205#1206#0" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
-            <element signature="e#1347#1348#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#1491#1492#0" expanded="true" />
-            <element signature="e#1596#1597#0" expanded="true" />
-            <element signature="e#1630#1631#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
-            <element signature="e#1804#1805#0" expanded="true" />
-            <element signature="e#1852#1853#0" expanded="true" />
-            <element signature="e#1908#1909#0" expanded="true" />
-          </folding>
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/to/my/java/OopAnotherExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6733167">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-          <folding />
+        <state vertical-scroll-proportion="0.7755611">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="e#1245#1246#0" expanded="true" />
+            <element signature="e#1279#1280#0" expanded="true" />
+            <element signature="e#1387#1388#0" expanded="true" />
+            <element signature="e#1421#1422#0" expanded="true" />
+            <element signature="e#1531#1532#0" expanded="true" />
+            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1670#1671#0" expanded="true" />
+            <element signature="e#1704#1705#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
