@@ -47,7 +47,8 @@ public class LambdaExample {
         Comparator<Integer> comparator = (o1, o2) -> o1 > factor ? o1 : o1.compareTo(o2);
 
         int[] sum = new int[1];
-        Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+                .parallelStream()
                 .forEach(i -> sum[0] += i);
         System.out.println(sum[0]);
     }
