@@ -28,14 +28,19 @@ public class LambdaExample {
         }
         System.out.println(result2);
 
-        List<Integer> result3 = filter(list, n -> n > 2);
+        final Predicate<Integer> greaterThan2 = n -> n > 2;
+        List<Integer> result3 = filter(list, greaterThan2);
         System.out.println(result3);
 
-        List<Integer> result4 = filter(list, n -> n < 7);
+        final Predicate<Integer> lessThan7 = n -> n < 7;
+        List<Integer> result4 = filter(list, lessThan7);
         System.out.println(result4);
 
         List<Integer> result5 = filter(result3, n -> n < 7);
         System.out.println(result5);
+
+        List<Integer> result6 = filter(list, greaterThan2.and(lessThan7));
+        System.out.println(result6);
     }
 
     private static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
