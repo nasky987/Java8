@@ -43,5 +43,16 @@ public class FuntionalInterfaceExamples {
         }
 
         System.out.println("positive integers: " + positiveNumbers);
+
+        Predicate<Integer> lessThan3 = i -> i < 3;
+
+        List<Integer> numbersLessThan3 = new ArrayList<>();
+        for(Integer num : numbers) {
+            if(lessThan3.test(num)) {
+                numbersLessThan3.add(num);
+            }
+        }
+
+        System.out.println("lessThan integers: " + numbersLessThan3);
     }
 }
