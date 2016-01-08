@@ -43,7 +43,7 @@ public class LambdaExample {
         List<Integer> result6 = filter(list, greaterThan2.and(lessThan7));
         System.out.println(result6);
 
-        final int factor = 10;
+        int factor = 10;
         Comparator<Integer> comparator = (o1, o2) -> o1 > factor ? o1 : o1.compareTo(o2);
     }
 
