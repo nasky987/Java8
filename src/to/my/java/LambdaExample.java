@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
 
 /**
@@ -46,9 +47,19 @@ public class LambdaExample {
         int factor = 10;
         Comparator<Integer> comparator = (o1, o2) -> o1 > factor ? o1 : o1.compareTo(o2);
 
-        int total = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
-                .parallelStream()
+        long start = System.currentTimeMillis();
+        int total = Arrays.asList(1, 2, 3)
+//                .parallelStream()
+                .stream()
+                .peek(i -> {
+                    try {
+                        TimeUnit.SECONDS.sleep(4);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                })
                 .reduce(0, (i1, i2) -> i1 + i2);
+        System.out.println("It took " + (System.currentTimeMillis() - start));
         System.out.println(total);
     }
 
