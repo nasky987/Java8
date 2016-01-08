@@ -27,8 +27,8 @@ public class WhyJava8 {
         System.out.println(stringBuilder.toString());
 
         final String result = numbers.stream()
-                                    .map(String :: valueOf)
-                                    .collect(joining(" : "));
+                                     .map(String :: valueOf)
+                                     .collect(joining(" : "));
         System.out.println(result);
     }
 }
