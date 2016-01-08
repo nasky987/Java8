@@ -17,12 +17,7 @@ public class FuntionalInterfaceExamples {
 
         System.out.println(identity.apply(999));
 
-        final Consumer<String> print = new Consumer<String>() {
-            @Override
-            public void accept(String value) {
-                System.out.println(value);
-            }
-        };
+        final Consumer<String> print = value -> System.out.println(value);
 
         print.accept("Hello");
 
