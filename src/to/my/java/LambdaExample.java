@@ -10,8 +10,8 @@ import java.util.List;
 public class LambdaExample {
     public  static  void main(String[] args) {
         final List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8 , 9, 10);
-        final List<Integer> result1 = new ArrayList<>();
 
+        final List<Integer> result1 = new ArrayList<>();
         for(Integer number : list) {
             if(number > 2) {
                 result1.add(number);
@@ -24,5 +24,17 @@ public class LambdaExample {
                 result2.add(number);
             }
         }
+    }
+
+    private <T> List<T> filter(List<T> list, int biggerThan) {
+        final List<T> result = new ArrayList<>();
+
+        for(T value : list) {
+            if(value > biggerThan) {
+                result.add(value);
+            }
+        }
+
+        return result;
     }
 }
