@@ -2,6 +2,7 @@ package to.my.java;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -41,6 +42,14 @@ public class LambdaExample {
 
         List<Integer> result6 = filter(list, greaterThan2.and(lessThan7));
         System.out.println(result6);
+
+        final int factor = 10;
+        Comparator<Integer> comparator = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1 > factor ? o1 : o1.compareTo(o2);
+            }
+        };
     }
 
     private static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
