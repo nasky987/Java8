@@ -48,7 +48,7 @@ public class LambdaExample {
         Comparator<Integer> comparator = (o1, o2) -> o1 > factor ? o1 : o1.compareTo(o2);
 
         long start = System.currentTimeMillis();
-        int total = Arrays.asList(1, 2, 3)
+        int total = Arrays.asList(1, 2, 3, 4, 5)
                 .parallelStream()
                 .peek(i -> {
                     try {
