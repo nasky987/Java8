@@ -1,5 +1,8 @@
 package to.my.java.Function;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -29,5 +32,16 @@ public class FuntionalInterfaceExamples {
         System.out.println(isPositive.test(1));
         System.out.println(isPositive.test(0));
         System.out.println(isPositive.test(-1));
+
+        List<Integer> numbers = Arrays.asList(-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5);
+
+        List<Integer> positiveNumbers = new ArrayList<>();
+        for(Integer num : numbers) {
+            if(isPositive.test(num)) {
+                positiveNumbers.add(num);
+            }
+        }
+
+        System.out.println("positive integers: " + positiveNumbers);
     }
 }
