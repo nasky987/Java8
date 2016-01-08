@@ -33,6 +33,9 @@ public class LambdaExample {
 
         List<Integer> result4 = filter(list, n -> n < 7);
         System.out.println(result4);
+
+        List<Integer> result5 = filter(result3, n -> n < 7);
+        System.out.println(result5);
     }
 
     private static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
