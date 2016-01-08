@@ -1,5 +1,6 @@
 package to.my.java.Function;
 
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**
@@ -15,5 +16,15 @@ public class FuntionalInterfaceExamples {
         final Function<Integer, Integer> identity = t -> t;
 
         System.out.println(identity.apply(999));
+
+        final Consumer<String> print = new Consumer<String>() {
+            @Override
+            public void accept(String value) {
+                System.out.println(value);
+            }
+        };
+
+        print.accept("Hello");
+
     }
 }
