@@ -2,6 +2,7 @@ package to.my.java.Function;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 /**
  * Created by hreeman on 1/8/16.
@@ -22,5 +23,11 @@ public class FuntionalInterfaceExamples {
 
         print.accept("Hello");
         greetings.accept("John");
+
+        Predicate<Integer> isPositive = i -> i > 0;
+
+        System.out.println(isPositive.test(1));
+        System.out.println(isPositive.test(0));
+        System.out.println(isPositive.test(-1));
     }
 }
