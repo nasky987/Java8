@@ -17,8 +17,9 @@ public class WhyJava8 {
             stringBuilder.append(number).append(separator);
         }
 
-        if(stringBuilder.length() > 0) {
-            stringBuilder.delete(stringBuilder.length() - separator.length(), stringBuilder.length());
+        final int stringLength = stringBuilder.length();
+        if(stringLength > 0) {
+            stringBuilder.delete(stringLength - separator.length(), stringLength);
         }
 
         System.out.println(stringBuilder.toString());
