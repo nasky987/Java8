@@ -49,8 +49,7 @@ public class LambdaExample {
 
         long start = System.currentTimeMillis();
         int total = Arrays.asList(1, 2, 3)
-//                .parallelStream()
-                .stream()
+                .parallelStream()
                 .peek(i -> {
                     try {
                         TimeUnit.SECONDS.sleep(4);
