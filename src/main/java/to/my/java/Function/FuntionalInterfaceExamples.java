@@ -54,5 +54,23 @@ public class FuntionalInterfaceExamples {
         }
 
         System.out.println("lessThan integers: " + numbersLessThan3);
+
+        System.out.println(filter(numbers, i -> i > 0));
+        System.out.println(filter(numbers, isPositive));
+
+        List<Integer> result = filter(numbers, lessThan3);
+        System.out.println(result);
+    }
+
+    private static <T> List<T> filter(List<T> list, Predicate<T> filter) {
+        List<T> result = new ArrayList<>();
+
+        for(T input : list) {
+            if(filter.test(input)) {
+                result.add(input);
+            }
+        }
+
+        return result;
     }
 }
