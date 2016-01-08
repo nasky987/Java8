@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40c76a82-b895-4d0b-9633-ca12bbbfbeaf" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/to/my/java/OopAnotherExample.java" afterPath="$PROJECT_DIR$/src/main/java/to/my/java/OopAndFpExamples.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/to/my/java/OopAndFpExamples.java" afterPath="$PROJECT_DIR$/src/main/java/to/my/java/OopAndFpExamples.java" />
     </list>
     <ignored path="Java8.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,17 +55,17 @@
       <file leaf-file-name="OopAndFpExamples.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/to/my/java/OopAndFpExamples.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0673316">
-              <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+            <state vertical-scroll-proportion="-1.8054863">
+              <caret line="28" column="110" selection-start-line="28" selection-start-column="110" selection-end-line="28" selection-end-column="110" />
               <folding>
-                <element signature="e#1754#1755#0" expanded="true" />
-                <element signature="e#1788#1789#0" expanded="true" />
-                <element signature="e#1896#1897#0" expanded="true" />
-                <element signature="e#1930#1931#0" expanded="true" />
-                <element signature="e#2040#2041#0" expanded="true" />
-                <element signature="e#2074#2075#0" expanded="true" />
-                <element signature="e#2179#2180#0" expanded="true" />
-                <element signature="e#2213#2214#0" expanded="true" />
+                <element signature="e#1885#1886#0" expanded="true" />
+                <element signature="e#1919#1920#0" expanded="true" />
+                <element signature="e#2027#2028#0" expanded="true" />
+                <element signature="e#2061#2062#0" expanded="true" />
+                <element signature="e#2171#2172#0" expanded="true" />
+                <element signature="e#2205#2206#0" expanded="true" />
+                <element signature="e#2310#2311#0" expanded="true" />
+                <element signature="e#2344#2345#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -747,7 +747,7 @@
       <created>1452243002135</created>
       <option name="number" value="Default" />
       <updated>1452243002135</updated>
-      <workItem from="1452243003360" duration="3200000" />
+      <workItem from="1452243003360" duration="4144000" />
     </task>
     <task id="LOCAL-00001" summary="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;테스트 케이스 작성 및 확인&#10;이번 코드의 경우 문제가 명확하므로 상관이 없지만 실제로는 그렇지 않을 가능성이 높다&#10;하나의 메소드에서 너무 많은 일을 처리하는것이 많다.">
       <created>1452243755252</created>
@@ -767,7 +767,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452245304473</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;이번 코드는 OOP의 오브젝트를 넘겨서 사용하는 방법에 대한 코드이다.&#10;이와 같은 패턴의 처리를 Strategy Pattern이라고 한다.">
+      <created>1452246324577</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1452246324577</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -800,7 +806,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3200000" />
+    <option name="totallyTimeSpent" value="4144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -813,11 +819,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -840,7 +846,8 @@
     <MESSAGE value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;테스트 케이스 작성 및 확인&#10;이번 코드의 경우 문제가 명확하므로 상관이 없지만 실제로는 그렇지 않을 가능성이 높다&#10;하나의 메소드에서 너무 많은 일을 처리하는것이 많다." />
     <MESSAGE value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;OOP의 특성을 이용하여 디자인 패턴이 적용된 코드 작성&#10;모든 코드를 검사할 것이 아니라 하나의 경우에만 검사하면 된다." />
     <MESSAGE value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;조건등은 같은데 처리해야하는 로직이 다르다던가 하는문제가 발생시&#10;OOP에서는 의존성등 문제를 쉽게 처리하지 못하는데 함수형 프로그래밍에선 어떤식으로 처리할 수 있는지에 대해서 알아 본다." />
-    <option name="LAST_COMMIT_MESSAGE" value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;조건등은 같은데 처리해야하는 로직이 다르다던가 하는문제가 발생시&#10;OOP에서는 의존성등 문제를 쉽게 처리하지 못하는데 함수형 프로그래밍에선 어떤식으로 처리할 수 있는지에 대해서 알아 본다." />
+    <MESSAGE value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;이번 코드는 OOP의 오브젝트를 넘겨서 사용하는 방법에 대한 코드이다.&#10;이와 같은 패턴의 처리를 Strategy Pattern이라고 한다." />
+    <option name="LAST_COMMIT_MESSAGE" value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;이번 코드는 OOP의 오브젝트를 넘겨서 사용하는 방법에 대한 코드이다.&#10;이와 같은 패턴의 처리를 Strategy Pattern이라고 한다." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -869,17 +876,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/to/my/java/OopAndFpExamples.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0673316">
-          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+        <state vertical-scroll-proportion="-1.8054863">
+          <caret line="28" column="110" selection-start-line="28" selection-start-column="110" selection-end-line="28" selection-end-column="110" />
           <folding>
-            <element signature="e#1754#1755#0" expanded="true" />
-            <element signature="e#1788#1789#0" expanded="true" />
-            <element signature="e#1896#1897#0" expanded="true" />
-            <element signature="e#1930#1931#0" expanded="true" />
-            <element signature="e#2040#2041#0" expanded="true" />
-            <element signature="e#2074#2075#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
+            <element signature="e#1885#1886#0" expanded="true" />
+            <element signature="e#1919#1920#0" expanded="true" />
+            <element signature="e#2027#2028#0" expanded="true" />
+            <element signature="e#2061#2062#0" expanded="true" />
+            <element signature="e#2171#2172#0" expanded="true" />
+            <element signature="e#2205#2206#0" expanded="true" />
+            <element signature="e#2310#2311#0" expanded="true" />
+            <element signature="e#2344#2345#0" expanded="true" />
           </folding>
         </state>
       </provider>
