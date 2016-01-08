@@ -28,19 +28,13 @@ public class LambdaExample {
         }
         System.out.println(result2);
 
-        List<Integer> result3 = filter(list, new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer integer) {
+        List<Integer> result3 = filter(list, (final Integer integer) -> {
                 return integer > 2;
-            }
         });
         System.out.println(result3);
 
-        List<Integer> result4 = filter(list, new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer integer) {
+        List<Integer> result4 = filter(list, (final Integer integer) -> {
                 return integer < 7;
-            }
         });
         System.out.println(result4);
     }
