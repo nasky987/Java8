@@ -28,10 +28,10 @@ public class LambdaExample {
         }
         System.out.println(result2);
 
-        List<Integer> result3 = filter(list, integer -> integer > 2);
+        List<Integer> result3 = filter(list, n -> n > 2);
         System.out.println(result3);
 
-        List<Integer> result4 = filter(list, integer -> integer < 7);
+        List<Integer> result4 = filter(list, n -> n < 7);
         System.out.println(result4);
     }
 
