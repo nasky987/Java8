@@ -3,6 +3,7 @@ package to.my.java;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * Created by Jhon on 2016-01-08.
@@ -17,6 +18,7 @@ public class LambdaExample {
                 result1.add(number);
             }
         }
+        System.out.println(result1);
 
         final List<Integer> result2 = new ArrayList<>();
         for(Integer number : list) {
@@ -24,13 +26,30 @@ public class LambdaExample {
                 result2.add(number);
             }
         }
+        System.out.println(result2);
+
+        List<Integer> result3 = filter(list, new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer integer) {
+                return integer > 2;
+            }
+        });
+        System.out.println(result3);
+
+        List<Integer> result4 = filter(list, new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer integer) {
+                return integer < 7;
+            }
+        });
+        System.out.println(result4);
     }
 
-    private <T> List<T> filter(List<T> list, int biggerThan) {
+    private static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
         final List<T> result = new ArrayList<>();
 
         for(T value : list) {
-            if(value > biggerThan) {
+            if(predicate.test(value)) {
                 result.add(value);
             }
         }
