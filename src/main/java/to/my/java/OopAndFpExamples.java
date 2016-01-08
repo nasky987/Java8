@@ -22,10 +22,15 @@ public class OopAndFpExamples {
         System.out.println(divisionResult);
 
         final FpCalculatorService fpCalculatorService = new FpCalculatorService();
-        System.out.println("      addition: " + fpCalculatorService.calculate((i1, i2) -> i1 + i2, 11, 4));
-        System.out.println("   subtraction: " + fpCalculatorService.calculate((i1, i2) -> i1 - i2, 11, 1));
-        System.out.println("multiplication: " + fpCalculatorService.calculate((i1, i2) -> i1 * i2, 11, 2));
-        System.out.println("      division: " + fpCalculatorService.calculate((i1, i2) -> i1 / i2, 20, 4));
+        final Calculation addtion = (i1, i2) -> i1 + i2;
+        final Calculation substraction = (i1, i2) -> i1 - i2;
+        final Calculation multiplication = (i1, i2) -> i1 * i2;
+        final Calculation division = (i1, i2) -> i1 / i2;
+
+        System.out.println("      addition: " + fpCalculatorService.calculate(addtion, 11, 4));
+        System.out.println("   subtraction: " + fpCalculatorService.calculate(substraction, 11, 1));
+        System.out.println("multiplication: " + fpCalculatorService.calculate(multiplication, 11, 2));
+        System.out.println("      division: " + fpCalculatorService.calculate(division, 20, 4));
         System.out.println("   custom calc: " + fpCalculatorService.calculate((i1, i2) -> ((i1 + i2) * 2) / i2, 20, 4));
     }
 }
