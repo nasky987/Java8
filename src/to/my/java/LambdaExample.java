@@ -45,6 +45,11 @@ public class LambdaExample {
 
         int factor = 10;
         Comparator<Integer> comparator = (o1, o2) -> o1 > factor ? o1 : o1.compareTo(o2);
+
+        int[] sum = new int[1];
+        Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+                .forEach(i -> sum[0] += i);
+        System.out.println(sum[0]);
     }
 
     private static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
