@@ -12,7 +12,7 @@ public class FuntionalInterfaceExamples {
         final Integer number = toInt.apply("100");
         System.out.println(number);
 
-        final Function<Integer, Integer> identity = Function.identity();
+        final Function<Integer, Integer> identity = t -> t;
 
         System.out.println(identity.apply(999));
     }
