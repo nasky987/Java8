@@ -7,13 +7,7 @@ import java.util.function.Function;
  */
 public class FuntionalInterfaceExamples {
     public static void main(String[] args) {
-        Function<String, Integer> toInt = new Function<String, Integer>() {
-
-            @Override
-            public Integer apply(String value) {
-                return Integer.parseInt(value);
-            }
-        };
+        final Function<String, Integer> toInt = value -> Integer.parseInt(value);
 
         final Integer number = toInt.apply("100");
         System.out.println(number);
