@@ -44,12 +44,7 @@ public class LambdaExample {
         System.out.println(result6);
 
         final int factor = 10;
-        Comparator<Integer> comparator = new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o1 > factor ? o1 : o1.compareTo(o2);
-            }
-        };
+        Comparator<Integer> comparator = (o1, o2) -> o1 > factor ? o1 : o1.compareTo(o2);
     }
 
     private static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
