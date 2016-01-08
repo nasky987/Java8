@@ -18,8 +18,9 @@ public class FuntionalInterfaceExamples {
         System.out.println(identity.apply(999));
 
         final Consumer<String> print = value -> System.out.println(value);
+        final Consumer<String> greetings = value -> System.out.println("Hello " + value);
 
         print.accept("Hello");
-
+        greetings.accept("John");
     }
 }
