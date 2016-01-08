@@ -6,11 +6,17 @@ package to.my.java;
 public class OopAnotherExample {
     public static void main(String[] args) {
         final CalculatorService calculatorService = new CalculatorService();
-        final int addtionResult = calculatorService.calculate('+', 1, 1);
-        System.out.println(addtionResult);
+        final int additionResult = calculatorService.calculate('+', 1, 1);
+        System.out.println(additionResult);
 
-        final int substractionResult = calculatorService.calculate('-', 1, 1);
-        System.out.println(substractionResult);
+        final int subtractionResult = calculatorService.calculate('-', 1, 1);
+        System.out.println(subtractionResult);
+
+        final int multiplicationResult = calculatorService.calculate('*', 1, 1);
+        System.out.println(multiplicationResult);
+
+        final int divisionResult = calculatorService.calculate('/', 8, 4);
+        System.out.println(divisionResult);
     }
 }
 
@@ -19,8 +25,12 @@ class CalculatorService {
         if (calculation == '+') {
             return num1 + num2;
         } else if (calculation == '-') {
-            return  num1 - num2;
-        } else {
+            return num1 - num2;
+        } else if(calculation == '*') {
+            return num1 * num2;
+        } else if (calculation == '/') {
+            return num1 / num2;
+        }else {
             throw new IllegalArgumentException("Unknown calculation: " + calculation);
         }
     }
