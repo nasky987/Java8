@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="40c76a82-b895-4d0b-9633-ca12bbbfbeaf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/to/my/java/OopAndFpExamples.java" afterPath="$PROJECT_DIR$/src/main/java/to/my/java/OopAndFpExamples.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java" />
     </list>
     <ignored path="Java8.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CalculatorServiceTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CalculatorServiceTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.40149626">
+              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -52,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OopAndFpExamples.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OopAndFpExamples.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/to/my/java/OopAndFpExamples.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5137157">
+            <state vertical-scroll-proportion="0.0">
               <caret line="29" column="95" selection-start-line="29" selection-start-column="95" selection-end-line="29" selection-end-column="95" />
               <folding>
                 <element signature="e#2092#2093#0" expanded="true" />
@@ -96,9 +96,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/to/my/java/OopAnotherExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/to/my/java/OopAndFpExamples.java" />
+        <option value="$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java" />
       </list>
     </option>
   </component>
@@ -268,7 +268,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/to/my/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OopAndFpExamples">
+  <component name="RunManager" selected="JUnit.CalculatorServiceTest">
     <configuration default="false" name="OopAndFpExamples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -735,8 +735,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.OopAndFpExamples" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorServiceTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CalculatorServiceTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.OopAndFpExamples" />
       </list>
     </recent_temporary>
   </component>
@@ -747,7 +747,7 @@
       <created>1452243002135</created>
       <option name="number" value="Default" />
       <updated>1452243002135</updated>
-      <workItem from="1452243003360" duration="4394000" />
+      <workItem from="1452243003360" duration="4505000" />
     </task>
     <task id="LOCAL-00001" summary="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;테스트 케이스 작성 및 확인&#10;이번 코드의 경우 문제가 명확하므로 상관이 없지만 실제로는 그렇지 않을 가능성이 높다&#10;하나의 메소드에서 너무 많은 일을 처리하는것이 많다.">
       <created>1452243755252</created>
@@ -779,7 +779,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452247193919</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;자주 사용하는 Function은 람다표현식으로 정의해서 가져다 사용이 가능하다.">
+      <created>1452247447514</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1452247447514</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -810,9 +816,12 @@
     <history-entry file="CalculatorServiceTest - 2016.01.08 at 18h 17m 34s.xml">
       <configuration name="CalculatorServiceTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CalculatorServiceTest - 2016.01.08 at 19h 05m 11s.xml">
+      <configuration name="CalculatorServiceTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4394000" />
+    <option name="totallyTimeSpent" value="4505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -854,7 +863,8 @@
     <MESSAGE value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;조건등은 같은데 처리해야하는 로직이 다르다던가 하는문제가 발생시&#10;OOP에서는 의존성등 문제를 쉽게 처리하지 못하는데 함수형 프로그래밍에선 어떤식으로 처리할 수 있는지에 대해서 알아 본다." />
     <MESSAGE value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;이번 코드는 OOP의 오브젝트를 넘겨서 사용하는 방법에 대한 코드이다.&#10;이와 같은 패턴의 처리를 Strategy Pattern이라고 한다." />
     <MESSAGE value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;람다 표현식을 이용한 코드 작성&#10;아직 이해가 잘 안되지만 우선은 진행" />
-    <option name="LAST_COMMIT_MESSAGE" value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;람다 표현식을 이용한 코드 작성&#10;아직 이해가 잘 안되지만 우선은 진행" />
+    <MESSAGE value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;자주 사용하는 Function은 람다표현식으로 정의해서 가져다 사용이 가능하다." />
+    <option name="LAST_COMMIT_MESSAGE" value="2016. 01. 08. 실습2&#10;kevin님 동영상 강좌 1회&#10;자주 사용하는 Function은 람다표현식으로 정의해서 가져다 사용이 가능하다." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -873,17 +883,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/to/my/java/OopAndFpExamples.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5137157">
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="95" selection-start-line="29" selection-start-column="95" selection-end-line="29" selection-end-column="95" />
           <folding>
             <element signature="e#2092#2093#0" expanded="true" />
@@ -895,6 +897,14 @@
             <element signature="e#2517#2518#0" expanded="true" />
             <element signature="e#2551#2552#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/to/my/java/CalculatorServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40149626">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
