@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 /**
  * Created by hreeman on 1/8/16.
@@ -60,8 +61,10 @@ public class FuntionalInterfaceExamples {
 
         List<Integer> result = filter(numbers, lessThan3);
         System.out.println(result);
-    }
 
+        final Supplier<String> helloSupplier = () -> "Hello ";
+        System.out.println(helloSupplier.get() + "World!");
+    }
     private static <T> List<T> filter(List<T> list, Predicate<T> filter) {
         List<T> result = new ArrayList<>();
 
