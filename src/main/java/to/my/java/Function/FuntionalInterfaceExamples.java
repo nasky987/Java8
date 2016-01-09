@@ -3,6 +3,7 @@ package to.my.java.Function;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -65,9 +66,21 @@ public class FuntionalInterfaceExamples {
         final Supplier<String> helloSupplier = () -> "Hello ";
         System.out.println(helloSupplier.get() + "World!");
 
-        printIfValidIndex(0, "John");
-        printIfValidIndex(1, "John");
-        printIfValidIndex(-1, "John");
+        long start = System.currentTimeMillis();
+        printIfValidIndex(0, getVeryExpensiveValue());
+        printIfValidIndex(-1, getVeryExpensiveValue());
+        printIfValidIndex(-2, getVeryExpensiveValue());
+        System.out.println("It took " + ((System.currentTimeMillis() - start) / 1000) + " seconds.");
+    }
+
+    private static String getVeryExpensiveValue() {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return "John";
     }
 
     private static void printIfValidIndex(int number, String value) {
