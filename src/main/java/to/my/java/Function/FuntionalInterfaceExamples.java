@@ -64,7 +64,20 @@ public class FuntionalInterfaceExamples {
 
         final Supplier<String> helloSupplier = () -> "Hello ";
         System.out.println(helloSupplier.get() + "World!");
+
+        printIfValidIndex(0, "John");
+        printIfValidIndex(1, "John");
+        printIfValidIndex(-1, "John");
     }
+
+    private static void printIfValidIndex(int number, String value) {
+        if(number >= 0) {
+            System.out.println("The values is " + value + ".");
+        }else {
+            System.out.println("Invalid");
+        }
+    }
+
     private static <T> List<T> filter(List<T> list, Predicate<T> filter) {
         List<T> result = new ArrayList<>();
 
