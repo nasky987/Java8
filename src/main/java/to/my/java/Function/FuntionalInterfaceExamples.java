@@ -67,9 +67,9 @@ public class FuntionalInterfaceExamples {
         System.out.println(helloSupplier.get() + "World!");
 
         long start = System.currentTimeMillis();
-        printIfValidIndex(0, getVeryExpensiveValue());
-        printIfValidIndex(-1, getVeryExpensiveValue());
-        printIfValidIndex(-2, getVeryExpensiveValue());
+        printIfValidIndex(0, () -> getVeryExpensiveValue());
+        printIfValidIndex(-1, () -> getVeryExpensiveValue());
+        printIfValidIndex(-2, () -> getVeryExpensiveValue());
         System.out.println("It took " + ((System.currentTimeMillis() - start) / 1000) + " seconds.");
     }
 
@@ -83,9 +83,9 @@ public class FuntionalInterfaceExamples {
         return "John";
     }
 
-    private static void printIfValidIndex(int number, String value) {
+    private static void printIfValidIndex(int number, Supplier<String> valueSupplier) {
         if(number >= 0) {
-            System.out.println("The values is " + value + ".");
+            System.out.println("The values is " + valueSupplier.get() + ".");
         }else {
             System.out.println("Invalid");
         }
