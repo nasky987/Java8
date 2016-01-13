@@ -40,6 +40,8 @@ public class FunctionalInterfaceExamples2 {
 
         System.out.println(" expensive products: " + expensiveProducts);
         System.out.println("discounted products: " + discountedProducts);
+
+        System.out.println("discounted products(<= $30): " + filter(discountedProducts, product -> product.getPrice().compareTo(new BigDecimal("30")) <= 0));
     }
 
     private static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
