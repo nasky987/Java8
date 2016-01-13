@@ -2,6 +2,7 @@ package to.my.java.Function;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.function.Function;
 
@@ -32,12 +33,17 @@ public class StreamPrelude {
     }
 
     private static <T, R> List<R> map(final List<T> list, final Function<T, R> mapper) {
-        final List<R> result = new ArrayList<>();
-        for(final T t : list) {
-            if(mapper != null) {
+        final List<R> result;
+
+        if(mapper != null) {
+            result = new ArrayList<>();
+        } else {
+            result = new ArrayList<>((List<R>) list);
+        }
+
+        if(result.isEmpty()) {
+            for (final T t : list) {
                 result.add(mapper.apply(t));
-            } else {
-                result.add((R)t);
             }
         }
 
