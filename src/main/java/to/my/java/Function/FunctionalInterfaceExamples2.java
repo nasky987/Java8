@@ -44,6 +44,13 @@ public class FunctionalInterfaceExamples2 {
         final Predicate<Product> lessThanOrEqualTo30 = product -> product.getPrice().compareTo(new BigDecimal("30")) <= 0;
         System.out.println("discounted products(<= $30): " + filter(discountedProducts, lessThanOrEqualTo30));
         System.out.println("           products(<= $30): " + filter(products, lessThanOrEqualTo30));
+
+        final List<BigDecimal> prices = map(products, product -> product.getPrice());
+        BigDecimal total = BigDecimal.ZERO;
+        for(final BigDecimal price : prices) {
+            total = total.add(price);
+        }
+        System.out.println("total: " + total);
     }
 
     private static <T> List<T> filter(List<T> list, Predicate<? super T> predicate) {
