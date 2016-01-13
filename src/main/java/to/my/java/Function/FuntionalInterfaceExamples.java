@@ -118,17 +118,17 @@ public class FuntionalInterfaceExamples {
         System.out.println(function.apply(t1, t2, t3));
     }
 
-    final InvalidFunctionalInterface anonymousClass = new InvalidFunctionalInterface() {
-        @Override
-        public <T> String mkString(final T value) {
-            return value.toString();
-        }
-    };
-
-    System.out.println("anonnymous Class: " + anonymousClass.mkString(123));
-
-    final InvalidFunctionalInterface invalidFunctionalInterface = value -> value.toString();
-    System.out.println(invalidFunctionalInterface.mkString(123));
+//    final InvalidFunctionalInterface anonymousClass = new InvalidFunctionalInterface() {
+//        @Override
+//        public <T> String mkString(final T value) {
+//            return value.toString();
+//        }
+//    };
+//
+//    System.out.println("anonnymous Class: " + anonymousClass.mkString(123));
+//
+//    final InvalidFunctionalInterface invalidFunctionalInterface = value -> value.toString();
+//    System.out.println(invalidFunctionalInterface.mkString(123));
 }
 
 @FunctionalInterface
