@@ -1,5 +1,6 @@
 package to.my.java.Function;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -108,6 +109,9 @@ public class FuntionalInterfaceExamples {
         println("Area is ", 12, 20, (message, length, width) -> message + (length * width));
         println(1L, "John", "test@email.com",
                 (id, name, email) -> "User info: ID=" + id + ", name=" + name + ", email=" + email);
+
+        BigDecimalToCurrency bigDecimalToCurrency = bd -> "$" + bd.toString();
+        System.out.println(bigDecimalToCurrency.toCurrency(new BigDecimal("120.00")));
     }
 
     private static <T1, T2, T3> void println(T1 t1, T2 t2, T3 t3, Function3<T1, T2, T3, String> function) {
@@ -115,6 +119,12 @@ public class FuntionalInterfaceExamples {
     }
 }
 
+@FunctionalInterface
 interface Function3<T1, T2, T3, R> {
     R apply(T1 t1, T2 t2, T3 t3);
+}
+
+@FunctionalInterface
+interface BigDecimalToCurrency {
+    String toCurrency(BigDecimal value);
 }
