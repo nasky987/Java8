@@ -25,14 +25,35 @@ public class StreamPrelude {
 
         final List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
         System.out.println(
-                map(numbers, i -> i * 2)
+                "mapOld mapper on: " +
+                mapOld(numbers, i -> i * 2)
         );
         System.out.println(
-                map(numbers, null)
+                "mapOld mapper off: " +
+                mapOld(numbers, null)
         );
+
+
+        System.out.println("map mapper on: " + map(numbers, i -> i * 2));
+        System.out.println("map mapper off: " + map(numbers, null));
     }
 
     private static <T, R> List<R> map(final List<T> list, final Function<T, R> mapper) {
+        final Function<T, R> function;
+        if(mapper != null) {
+            function = mapper;
+        } else {
+            function = t -> (R)t;
+        }
+
+        final List<R> result = new ArrayList<>();
+        for(final T t : list) {
+            result.add(function.apply(t));
+        }
+        return result;
+    }
+
+    private static <T, R> List<R> mapOld(final List<T> list, final Function<T, R> mapper) {
         final List<R> result;
 
         if(mapper != null) {
