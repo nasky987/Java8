@@ -1,6 +1,7 @@
 package to.my.java.Function;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
@@ -20,5 +21,26 @@ public class StreamPrelude {
         System.out.println(Integer.MIN_VALUE);
         System.out.println(Integer.MAX_VALUE);
         System.out.println("minInt: " + minInt);
+
+        final List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        System.out.println(
+                map(numbers, i -> i * 2)
+        );
+        System.out.println(
+                map(numbers, null)
+        );
+    }
+
+    private static <T, R> List<R> map(final List<T> list, final Function<T, R> mapper) {
+        final List<R> result = new ArrayList<>();
+        for(final T t : list) {
+            if(mapper != null) {
+                result.add(mapper.apply(t));
+            } else {
+                result.add((R)t);
+            }
+        }
+
+        return result;
     }
 }
