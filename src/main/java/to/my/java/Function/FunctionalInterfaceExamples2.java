@@ -21,6 +21,14 @@ public class FunctionalInterfaceExamples2 {
                 new Product(5L, "E", new BigDecimal("110.99"))
         );
         System.out.println(products);
+
+        List<Product> result = new ArrayList<>();
+        for(final Product product : products) {
+            if(product.getPrice().compareTo(new BigDecimal("20")) >= 0) {
+                result.add(product);
+            }
+        }
+        System.out.println(result);
     }
 }
 
