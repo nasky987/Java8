@@ -35,7 +35,8 @@ public class StreamPrelude {
 
 
         System.out.println("map mapper on: " + map(numbers, i -> i * 2));
-        System.out.println("map mapper off: " + map(numbers, i -> i));
+        System.out.println("map mapper i -> i: " + map(numbers, i -> i));
+        System.out.println("map mapper identity(): " + map(numbers, Function.identity()));
     }
 
     private static <T, R> List<R> map(final List<T> list, final Function<T, R> mapper) {
