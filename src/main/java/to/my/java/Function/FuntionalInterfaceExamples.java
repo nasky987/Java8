@@ -13,7 +13,7 @@ import java.util.function.Supplier;
  * Created by hreeman on 1/8/16.
  */
 public class FuntionalInterfaceExamples {
-    public static void main(String[] args) {
+    public void run4FunctionalInterfaces() {
         final Function<String, Integer> toInt = value -> Integer.parseInt(value);
 
         final Integer number = toInt.apply("100");
@@ -102,4 +102,16 @@ public class FuntionalInterfaceExamples {
 
         return result;
     }
+
+    public static void main(String[] args) {
+        println(1, 2, 3, (i1, i2, i3) -> String.valueOf(i1 + i2 + i3));
+    }
+
+    private static <T1, T2, T3> void println(T1 t1, T2 t2, T3 t3, Function3<T1, T2, T3, String> function) {
+        System.out.println(function.apply(t1, t2, t3));
+    }
+}
+
+interface Function3<T1, T2, T3, R> {
+    R apply(T1 t1, T2 t2, T3 t3);
 }
