@@ -35,20 +35,13 @@ public class StreamPrelude {
 
 
         System.out.println("map mapper on: " + map(numbers, i -> i * 2));
-        System.out.println("map mapper off: " + map(numbers, null));
+        System.out.println("map mapper off: " + map(numbers, i -> i));
     }
 
     private static <T, R> List<R> map(final List<T> list, final Function<T, R> mapper) {
-        final Function<T, R> function;
-        if(mapper != null) {
-            function = mapper;
-        } else {
-            function = t -> (R)t;
-        }
-
         final List<R> result = new ArrayList<>();
         for(final T t : list) {
-            result.add(function.apply(t));
+            result.add(mapper.apply(t));
         }
         return result;
     }
