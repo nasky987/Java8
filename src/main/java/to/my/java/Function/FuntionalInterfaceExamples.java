@@ -117,6 +117,18 @@ public class FuntionalInterfaceExamples {
     private static <T1, T2, T3> void println(T1 t1, T2 t2, T3 t3, Function3<T1, T2, T3, String> function) {
         System.out.println(function.apply(t1, t2, t3));
     }
+
+    final InvalidFunctionalInterface anonymousClass = new InvalidFunctionalInterface() {
+        @Override
+        public <T> String mkString(final T value) {
+            return value.toString();
+        }
+    };
+
+    System.out.println("anonnymous Class: " + anonymousClass.mkString(123));
+
+    final InvalidFunctionalInterface invalidFunctionalInterface = value -> value.toString();
+    System.out.println(invalidFunctionalInterface.mkString(123));
 }
 
 @FunctionalInterface
@@ -127,4 +139,9 @@ interface Function3<T1, T2, T3, R> {
 @FunctionalInterface
 interface BigDecimalToCurrency {
     String toCurrency(BigDecimal value);
+}
+
+@FunctionalInterface
+interface InvalidFunctionalInterface {
+    <T> String mkString(T value);
 }
