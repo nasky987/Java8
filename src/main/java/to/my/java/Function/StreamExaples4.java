@@ -73,6 +73,14 @@ public class StreamExaples4 {
 
         final Order order = new Order(1L, Arrays.asList(item1, item2, item3));
         System.out.println("order.totalPrice(): " + order.totalPrice());
+
+        System.out.println("====================================================");
+        System.out.println("Easy Total Price(>= 30): " +
+                products.stream()
+                        .filter(product -> product.getPrice().compareTo(new BigDecimal("30")) >=0)
+                        .map(product -> product.getPrice())
+                        .reduce(BigDecimal.ZERO, BigDecimal::add)
+        );
     }
 }
 
