@@ -30,10 +30,22 @@ public class StreamExamples2 {
 
         System.out.println("Funtional Result: " +
             numbers.stream()
-                    .filter(number -> number > 3)
-                    .filter(number -> number < 9)
-                    .map(number -> number * 2)
-                    .filter(number -> number > 10)
+                    .filter(number -> {
+                        System.out.println("number " + number + " is > 3? ");
+                        return number > 3;
+                    })
+                    .filter(number -> {
+                        System.out.println("number " + number + " is < 9? ");
+                        return number < 9;
+                    })
+                    .map(number -> {
+                        System.out.println("number " + number + " is * 2? ");
+                        return number * 2;
+                    })
+                    .filter(number -> {
+                        System.out.println("number " + number + " is > 10? ");
+                        return number > 10;
+                    })
                     .findFirst()
         );
     }
