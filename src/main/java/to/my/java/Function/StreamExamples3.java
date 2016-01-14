@@ -97,5 +97,11 @@ public class StreamExamples3 {
                     .filter(i -> i == integer128)
                     .findFirst()
         );
+
+        System.out.println(
+                Stream.of(1, 2, 3, 4, 5, 128)
+                    .filter(i -> i.equals(integer128))
+                    .findFirst()
+        );
     }
 }
