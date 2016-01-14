@@ -70,5 +70,32 @@ public class StreamExamples3 {
                         .distinct()
                         .collect(toList())
         );
+
+        System.out.println(
+                Stream.of(1, 2, 3, 4, 5)
+                    .filter(i -> i == 3)
+                    .findFirst()
+        );
+
+        final Integer integer3 = 3;
+        System.out.println(
+                Stream.of(1, 2, 3, 4, 5)
+                    .filter(i -> i == integer3)
+                    .findFirst()
+        );
+
+        final Integer integer127 = 127;
+        System.out.println(
+                Stream.of(1, 2, 3, 4, 5, 127)
+                    .filter(i -> i == integer127)
+                    .findFirst()
+        );
+
+        final Integer integer128 = 128;
+        System.out.println(
+                Stream.of(1, 2, 3, 4, 5, 128)
+                    .filter(i -> i == integer128)
+                    .findFirst()
+        );
     }
 }
