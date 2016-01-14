@@ -61,5 +61,14 @@ public class StreamExamples3 {
                         .distinct()
                         .collect(joining(", ", "[", "]"))
         );
+
+        System.out.println("distinct().collection(toList()): " +
+                Stream.of(1, 3, 3, 5, 5)
+                        .filter(i -> i > 2)
+                        .map(i -> i * 2)
+                        .map(i -> "#" + i)
+                        .distinct()
+                        .collect(toList())
+        );
     }
 }
