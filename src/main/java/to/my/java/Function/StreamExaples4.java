@@ -50,6 +50,21 @@ public class StreamExaples4 {
                     .map(product -> product.getPrice())
                     .reduce(BigDecimal.ZERO, (price1, price2) -> price1.add(price2))
         );
+
+        System.out.println("====================================================");
+        System.out.println("Total Price(>= 30): " +
+            products.stream()
+                .filter(product -> product.getPrice().compareTo(new BigDecimal("30")) >=0)
+                .map(product -> product.getPrice())
+                .reduce(BigDecimal.ZERO, (price1, price2) -> price1.add(price2))
+        );
+
+        System.out.println("====================================================");
+        System.out.println("Number of Total Price(>= 30): " +
+            products.stream()
+                .filter(product -> product.getPrice().compareTo(new BigDecimal("30")) >=0)
+                .count()
+        );
     }
 }
 
