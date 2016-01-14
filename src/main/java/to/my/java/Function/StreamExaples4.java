@@ -6,6 +6,7 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.joining;
@@ -36,6 +37,18 @@ public class StreamExaples4 {
                     .filter(product -> product.getPrice().compareTo(new BigDecimal("30")) >= 0)
                     .map(product -> product.toString())
                     .collect(joining("\n"))
+        );
+
+        System.out.println("====================================================");
+        System.out.println("IntStream.sum: " +
+            IntStream.of(1, 2, 3, 4, 5)
+                .sum()
+        );
+
+        System.out.println("Total Price: " +
+            products.stream()
+                    .map(product -> product.getPrice())
+                    .reduce(BigDecimal.ZERO, (price1, price2) -> price1.add(price2))
         );
     }
 }
