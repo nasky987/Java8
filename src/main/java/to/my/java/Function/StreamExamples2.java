@@ -15,11 +15,15 @@ public class StreamExamples2 {
         System.out.println();
 
         final List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        final List<Integer> result = new ArrayList<>();
+        Integer result = null;
+
         for(final Integer number : numbers) {
             if(number > 3 && number < 9) {
                 final Integer newNumber = number * 2;
-                result.add(newNumber);
+                if(newNumber > 10) {
+                    result = newNumber;
+                    break;
+                }
             }
         }
         System.out.println("Imperative Result: " + result);
