@@ -1,5 +1,6 @@
 package to.my.java.Function;
 
+import java.util.concurrent.TimeUnit;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
@@ -7,11 +8,20 @@ import java.util.stream.Stream;
  * Created by hreeman on 1/15/16.
  */
 public class StreamExamples5ParallelPerformance {
+    private static void slowDown() {
+        try {
+            TimeUnit.MICROSECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static long iterativeSum(long n) {
         long result = 0;
 
         for(long i = 0; i <= n; i++) {
             result += i;
+            slowDown();
         }
 
         return result;
@@ -20,6 +30,7 @@ public class StreamExamples5ParallelPerformance {
     public static long sequentialSum(long n) {
         return Stream.iterate(1L, i -> i+1)
                     .limit(n)
+                    .peek(i -> slowDown())
                     .reduce(Long::sum)
                     .get();
     }
@@ -28,12 +39,14 @@ public class StreamExamples5ParallelPerformance {
         return Stream.iterate(1L, i -> i+1)
                 .limit(n)
                 .parallel()
+                .peek(i -> slowDown())
                 .reduce(Long::sum)
                 .get();
     }
 
     public static long rangedSum(long n) {
         return LongStream.rangeClosed(1, n)
+                        .peek(i -> slowDown())
                         .reduce(Long::sum)
                         .getAsLong();
     }
@@ -41,12 +54,13 @@ public class StreamExamples5ParallelPerformance {
     public static long parallelRangedSum(long n) {
         return LongStream.rangeClosed(1, n)
                 .parallel()
+                .peek(i -> slowDown())
                 .reduce(Long::sum)
                 .getAsLong();
     }
 
     public static void main(String[] args) {
-        final long n = 10_000_000;
+        final long n = 1_000;
 
         final long start0 = System.currentTimeMillis();
         System.out.println("Gauss Sum(n):         " + (1+n) * (n/2));
