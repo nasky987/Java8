@@ -1,6 +1,9 @@
 package to.my.java.Function.ex11;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * Created by hreeman on 1/15/16.
@@ -15,5 +18,77 @@ public class MethodReferenceExamples {
         System.out.println("=========================================");
         Arrays.asList(1, 2, 3, 4, 5)
                 .forEach(System.out::println);
+
+        System.out.println();
+        System.out.println(
+            Arrays.asList(new BigDecimal("10.0"), new BigDecimal("23"), new BigDecimal("5"))
+                    .stream()
+                    .sorted()
+                    .collect(toList())
+        );
+
+        System.out.println();
+        System.out.println("==============================");
+        System.out.println("Lambda Expression");
+        System.out.println("==============================");
+        System.out.println(
+            Arrays.asList(new BigDecimal("10.0"), new BigDecimal("23"), new BigDecimal("5"))
+                    .stream()
+                    .sorted((bd1, bd2) -> bd1.compareTo(bd2))
+                    .collect(toList())
+        );
+
+        System.out.println("==============================");
+        System.out.println("Custom Method Reference with Class Method");
+        System.out.println("==============================");
+        System.out.println(
+            Arrays.asList(new BigDecimal("10.0"), new BigDecimal("23"), new BigDecimal("5"))
+                    .stream()
+                    .sorted(BigDecimalUtil::compare)
+                    .collect(toList())
+        );
+
+        System.out.println("==============================");
+        System.out.println("Custom Method Reference with Any Object Instance Method");
+        System.out.println("==============================");
+        System.out.println(
+            Arrays.asList(new BigDecimal("10.0"), new BigDecimal("23"), new BigDecimal("5"))
+                    .stream()
+                    .sorted(BigDecimal::compareTo)
+                    .collect(toList())
+        );
+
+        System.out.println("==============================");
+        System.out.println(
+            Arrays.asList("a", "b", "c" ,"d")
+                .stream()
+                .anyMatch(x -> x.equals("c"))
+        );
+
+        System.out.println("==============================");
+        System.out.println(
+                Arrays.asList("a", "b", "c" ,"d")
+                        .stream()
+                        .anyMatch("c"::equals)
+//                        .anyMatch(String::equals) //wrong Case
+        );
+
+        System.out.println("==============================");
+        System.out.println("Custom Method Reference with Special Object Instance Method");
+        System.out.println("==============================");
+
+        final String targetString = "c";
+        System.out.println(
+                Arrays.asList("a", "b", "c" ,"d")
+                        .stream()
+                        .anyMatch(targetString::equals)
+//                        .anyMatch(String::equals) //wrong Case
+        );
+    }
+}
+
+class BigDecimalUtil {
+    public static int compare(BigDecimal bd1, BigDecimal bd2) {
+        return bd1.compareTo(bd2);
     }
 }
