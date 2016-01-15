@@ -13,7 +13,9 @@ import java.util.stream.Stream;
  */
 public class StreamExamples5ParrelPerformancePractical {
     private static final String[] priceStrings = {"1.0", "100.99", "35.75", "21.30", "88.00"};
+    private static final BigDecimal[] targetPrices = {new BigDecimal("30"), new BigDecimal("20"), new BigDecimal("31")};
     private static final Random random = new Random(123);
+    private static final Random targetPriceRandom = new Random(111);
 
     private static final List<Product2> products;
 
@@ -82,6 +84,19 @@ public class StreamExamples5ParrelPerformancePractical {
         imperativeTest(targetPrice);
         streamTest(targetPrice);
         parallelStreamTest(targetPrice);
+
+        System.out.println("\nIgnoreTest Above\n========================\n");
+        System.out.println("Start!");
+
+        for(int i = 0; i < 5; i++) {
+            BigDecimal price = targetPrices[targetPriceRandom.nextInt(3)];
+
+            System.out.println("**********************[" + i + "]***********************");
+            imperativeTest(price);
+            streamTest(price);
+            parallelStreamTest(price);
+            System.out.println("**********************[" + i + "]***********************");
+        }
     }
 }
 
