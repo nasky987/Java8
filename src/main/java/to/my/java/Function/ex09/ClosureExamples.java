@@ -4,14 +4,21 @@ package to.my.java.Function.ex09;
  * Created by hreeman on 1/15/16.
  */
 public class ClosureExamples {
+    private int number = 999;
+
+
     public static void main(String[] args) {
+        new ClosureExamples().test1();
+    }
+
+    private void test1() {
         final int number = 100;
 
         testClosure("Anonymous Class",
                 new Runnable() {
                     @Override
                     public void run() {
-                        System.out.println(number);
+                        System.out.println(ClosureExamples.this.number);
                     }
                 }
         );
