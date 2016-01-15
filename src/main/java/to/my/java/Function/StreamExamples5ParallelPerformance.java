@@ -47,6 +47,11 @@ public class StreamExamples5ParallelPerformance {
 
     public static void main(String[] args) {
         final long n = 10_000_000;
+
+        final long start0 = System.currentTimeMillis();
+        System.out.println("Gauss Sum(n):         " + (1+n) * (n/2));
+        System.out.println("                      " + (System.currentTimeMillis() - start0) + " ms\n");
+
         final long start1 = System.currentTimeMillis();
         System.out.println("iterativeSum(n):      " + iterativeSum(n));
         System.out.println("                      " + (System.currentTimeMillis() - start1) + " ms\n");
