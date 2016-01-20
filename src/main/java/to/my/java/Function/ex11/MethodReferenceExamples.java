@@ -125,6 +125,18 @@ public class MethodReferenceExamples {
         final Function<Integer, String> fmr2 = MethodReferenceExamples::doubleThenToString;
         final String resultFmr2 = fmr2.apply(5);
         System.out.println(resultFmr2);
+
+        System.out.println("=========================================================");
+        List<Function<Integer, String>> fsBoth =
+                Arrays.asList(
+                        i -> String.valueOf(i * 2),
+                        MethodReferenceExamples::doubleThenToString,
+                        MethodReferenceExamples::addHashPrefix
+                );
+        for(final Function<Integer, String> f : fsBoth){
+            final String result = f.apply(7);
+            System.out.println(result);
+        }
     }
 
     private static String testFirstClassFunction(int n, Function<Integer, String> f){
@@ -141,6 +153,10 @@ public class MethodReferenceExamples {
 
     private static Function<Integer,String> getDoubleThenToStringUsingMethodReference() {
         return MethodReferenceExamples::doubleThenToString;
+    }
+
+    private static String addHashPrefix(int number) {
+        return "#" + number;
     }
 }
 
