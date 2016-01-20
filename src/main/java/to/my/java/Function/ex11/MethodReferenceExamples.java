@@ -2,6 +2,7 @@ package to.my.java.Function.ex11;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.List;
 import java.util.function.Function;
 
 import static java.util.stream.Collectors.toList;
@@ -102,6 +103,13 @@ public class MethodReferenceExamples {
         final Function<Integer, String> fmr = getDoubleThenToStringUsingMethodReference();
         final String resultFromFrm = fmr.apply(3);
         System.out.println(resultFromFrm);
+
+        System.out.println("========================================================");
+        final List<Function<Integer, String>> fsL = Arrays.asList(i -> String.valueOf(i * 2));
+        for(final Function<Integer, String> f : fsL) {
+            final String result = f.apply(3);
+            System.out.println(result);
+        }
     }
 
     private static String testFirstClassFunction(int n, Function<Integer, String> f){
