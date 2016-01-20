@@ -116,6 +116,11 @@ public class MethodReferenceExamples {
             final String result = f.apply(3);
             System.out.println(result);
         }
+
+        System.out.println("========================================================");
+        final Function<Integer, String> fl2 = i -> String.valueOf(i * 2);
+        final String resultFl2 = fl2.apply(3);
+        System.out.println(resultFl2);
     }
 
     private static String testFirstClassFunction(int n, Function<Integer, String> f){
