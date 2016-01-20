@@ -119,8 +119,12 @@ public class MethodReferenceExamples {
 
         System.out.println("========================================================");
         final Function<Integer, String> fl2 = i -> String.valueOf(i * 2);
-        final String resultFl2 = fl2.apply(3);
+        final String resultFl2 = fl2.apply(5);
         System.out.println(resultFl2);
+
+        final Function<Integer, String> fmr2 = MethodReferenceExamples::doubleThenToString;
+        final String resultFmr2 = fmr2.apply(5);
+        System.out.println(resultFmr2);
     }
 
     private static String testFirstClassFunction(int n, Function<Integer, String> f){
