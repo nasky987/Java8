@@ -2,6 +2,8 @@ package to.my.java.Function.ex11;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
 
 import static java.util.stream.Collectors.toList;
 
@@ -84,6 +86,77 @@ public class MethodReferenceExamples {
                         .anyMatch(targetString::equals)
 //                        .anyMatch(String::equals) //wrong Case
         );
+
+        System.out.println();
+        methodReference03();
+    }
+
+    private static void methodReference03() {
+        System.out.println(testFirstClassFunction(3, i -> String.valueOf(i * 2)));
+        System.out.println(testFirstClassFunction(3, MethodReferenceExamples::doubleThenToString));
+
+        System.out.println("=======================================================");
+        final Function<Integer, String> fl1 = getDoubleThenToStringUsingLambdaExpression();
+        final String resultFromFl = fl1.apply(3);
+        System.out.println(resultFromFl);
+
+        final Function<Integer, String> fmr = getDoubleThenToStringUsingMethodReference();
+        final String resultFromFrm = fmr.apply(3);
+        System.out.println(resultFromFrm);
+
+        System.out.println("========================================================");
+        final List<Function<Integer, String>> fsL = Arrays.asList(i -> String.valueOf(i * 2));
+        for(final Function<Integer, String> f : fsL) {
+            final String result = f.apply(3);
+            System.out.println(result);
+        }
+
+        final List<Function<Integer, String>> fsMr = Arrays.asList(MethodReferenceExamples::doubleThenToString);
+        for(final Function<Integer, String> f : fsMr) {
+            final String result = f.apply(3);
+            System.out.println(result);
+        }
+
+        System.out.println("========================================================");
+        final Function<Integer, String> fl2 = i -> String.valueOf(i * 2);
+        final String resultFl2 = fl2.apply(5);
+        System.out.println(resultFl2);
+
+        final Function<Integer, String> fmr2 = MethodReferenceExamples::doubleThenToString;
+        final String resultFmr2 = fmr2.apply(5);
+        System.out.println(resultFmr2);
+
+        System.out.println("=========================================================");
+        List<Function<Integer, String>> fsBoth =
+                Arrays.asList(
+                        i -> String.valueOf(i * 2),
+                        MethodReferenceExamples::doubleThenToString,
+                        MethodReferenceExamples::addHashPrefix
+                );
+        for(final Function<Integer, String> f : fsBoth){
+            final String result = f.apply(7);
+            System.out.println(result);
+        }
+    }
+
+    private static String testFirstClassFunction(int n, Function<Integer, String> f){
+        return "The result is " + f.apply(n);
+    }
+
+    private static String doubleThenToString(int i) {
+        return String.valueOf(i * 2);
+    }
+
+    private static Function<Integer, String> getDoubleThenToStringUsingLambdaExpression() {
+        return i -> String.valueOf(i * 2);
+    }
+
+    private static Function<Integer,String> getDoubleThenToStringUsingMethodReference() {
+        return MethodReferenceExamples::doubleThenToString;
+    }
+
+    private static String addHashPrefix(int number) {
+        return "#" + number;
     }
 }
 
