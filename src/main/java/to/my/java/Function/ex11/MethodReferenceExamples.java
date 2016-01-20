@@ -93,6 +93,11 @@ public class MethodReferenceExamples {
     private static void methodReference03() {
         System.out.println(testFirstClassFunction(3, i -> String.valueOf(i * 2)));
         System.out.println(testFirstClassFunction(3, MethodReferenceExamples::doubleThenToString));
+
+        System.out.println("=======================================================");
+        final Function<Integer, String> fl1 = getDoubleThenToStringUsingLambdaExcpression();
+        final String resultFromFl = fl1.apply(3);
+        System.out.println(resultFromFl);
     }
 
     private static String testFirstClassFunction(int n, Function<Integer, String> f){
@@ -101,6 +106,10 @@ public class MethodReferenceExamples {
 
     private static String doubleThenToString(int i) {
         return String.valueOf(i * 2);
+    }
+
+    private static Function<Integer, String> getDoubleThenToStringUsingLambdaExcpression() {
+        return i -> String.valueOf(i * 2);
     }
 }
 
