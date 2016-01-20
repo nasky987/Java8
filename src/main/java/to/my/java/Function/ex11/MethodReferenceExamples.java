@@ -110,6 +110,12 @@ public class MethodReferenceExamples {
             final String result = f.apply(3);
             System.out.println(result);
         }
+
+        final List<Function<Integer, String>> fsMr = Arrays.asList(MethodReferenceExamples::doubleThenToString);
+        for(final Function<Integer, String> f : fsMr) {
+            final String result = f.apply(3);
+            System.out.println(result);
+        }
     }
 
     private static String testFirstClassFunction(int n, Function<Integer, String> f){
