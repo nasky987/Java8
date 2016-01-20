@@ -2,6 +2,7 @@ package to.my.java.Function.ex11;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.function.Function;
 
 import static java.util.stream.Collectors.toList;
 
@@ -84,6 +85,17 @@ public class MethodReferenceExamples {
                         .anyMatch(targetString::equals)
 //                        .anyMatch(String::equals) //wrong Case
         );
+
+        System.out.println();
+        methodReference03();
+    }
+
+    private static void methodReference03() {
+        System.out.println(testFirstClassFunction(3, i -> String.valueOf(i * 2)));
+    }
+
+    private static String testFirstClassFunction(int n, Function<Integer, String> f){
+        return "The result is " + f.apply(n);
     }
 }
 
