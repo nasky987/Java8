@@ -33,10 +33,12 @@ public class MethodReferenceExample2Constructor {
         System.out.println("================================================");
 
         final ProductA a = createProduct(1L, "A", new BigDecimal("123"), ProductA::new);
-        final ProductB b = createProduct(1L, "A", new BigDecimal("123"), ProductB::new);
-        
+        final ProductB b = createProduct(2L, "B", new BigDecimal("111"), ProductB::new);
+        final ProductC c = createProduct(3L, "C", new BigDecimal("10"), ProductC::new);
+
         System.out.println(a);
         System.out.println(b);
+        System.out.println(c);
     }
 
     private static <T extends Product> T createProduct(final Long id,
@@ -110,5 +112,16 @@ class ProductB extends Product {
     @Override
     public String toString() {
         return "B=" + super.toString();
+    }
+}
+
+class ProductC extends Product {
+    public ProductC(Long id, String name, BigDecimal price) {
+        super(id, name, price);
+    }
+
+    @Override
+    public String toString() {
+        return "C=" + super.toString();
     }
 }
