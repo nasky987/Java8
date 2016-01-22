@@ -22,11 +22,31 @@ public class MethodReferenceExample2Constructor {
         System.out.println(section);
         System.out.println(section1WithLambdaExpression);
         System.out.println(section1WithMethodReference);
+
+        System.out.println("================================================");
+        final Product product = new Product(1L, "A", new BigDecimal("100"));
+        System.out.println(product);
+
+        final ProductCreator productCreator = Product::new;
+        System.out.println(productCreator.create(1L, "A", new BigDecimal("100")));
     }
+}
+
+@FunctionalInterface
+interface ProductCreator {
+    Product create(Long id, String name, BigDecimal price);
 }
 
 @AllArgsConstructor
 @Data
 class Section {
     private int number;
+}
+
+@AllArgsConstructor
+@Data
+class Product {
+    private Long id;
+    private String name;
+    private BigDecimal price;
 }
