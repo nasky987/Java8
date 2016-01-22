@@ -12,10 +12,16 @@ import java.util.function.Function;
 public class MethodReferenceExample2Constructor {
     public static void main(String[] args) {
         final Section section = new Section(1);
-        final Function<Integer, Section> sectionFactory = number -> new Section(number);
-        final Section section1WithFunction = sectionFactory.apply(1);
+
+        final Function<Integer, Section> sectionFactoryWithLambdaExpression = number -> new Section(number);
+        final Section section1WithLambdaExpression = sectionFactoryWithLambdaExpression.apply(1);
+
+        final Function<Integer, Section> sectionFactoryWithMethodReference = Section::new;
+        final Section section1WithMethodReference = sectionFactoryWithMethodReference.apply(1);
+
         System.out.println(section);
-        System.out.println(section1WithFunction);
+        System.out.println(section1WithLambdaExpression);
+        System.out.println(section1WithMethodReference);
     }
 }
 
